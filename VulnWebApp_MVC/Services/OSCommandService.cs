@@ -31,6 +31,7 @@ namespace VulnWebApp.Services
             {
                 ProcessStartInfo startinfo = new ProcessStartInfo();
                 startinfo.FileName = @"cmd.exe";
+                // This line added to move vulnerable command to next line (34->35)
                 startinfo.Arguments = " /C ping -n 2 " + command;
                 Process process = new Process();
                 process.StartInfo = startinfo;
